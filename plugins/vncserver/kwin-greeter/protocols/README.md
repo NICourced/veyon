@@ -13,3 +13,9 @@ This handles fractional scaling without deriving logical size from pixel size.
 
 Copyright and license notices are retained in each XML file. Bindings are
 produced by the build host's `wayland-scanner`; no generated C is checked in.
+
+`fake-input.xml` comes from
+[KDE plasma-wayland-protocols](https://invent.kde.org/libraries/plasma-wayland-protocols/-/blob/master/src/protocols/fake-input.xml).
+The client binds version 5 on KWin 6.1 and version 6 where advertised. Version 5
+uses evdev keycodes and a keymap read through `wl_keyboard`; version 6 adds native
+keysyms. The interface must be declared in the installed server desktop file.
